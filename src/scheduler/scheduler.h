@@ -37,10 +37,10 @@ typedef struct Process {
 // Function prototypes
 uint32_t getRandNumFromFile(uint32_t line, FILE* random_num_file_ptr);
 uint32_t randomOS(uint32_t upper_bound, uint32_t process_indx, FILE* random_num_file_ptr);
-void printStart(Process process_list[]);
-void printFinal(Process finished_process_list[]);
-void printProcessSpecifics(Process process_list[]);
-void printSummaryData(Process process_list[]);
+void printStart(Process process_list[],uint32_t TOTAL_CREATED_PROCESSES);
+void printFinal(Process finished_process_list[], uint32_t TOTAL_FINISHED_PROCESSES, uint32_t TOTAL_CREATED_PROCESSES);
+void printProcessSpecifics(Process process_list[], uint32_t TOTAL_CREATED_PROCESSES);
+void printSummaryData(Process process_list[],uint32_t TOTAL_CREATED_PROCESSES, uint32_t TOTAL_NUMBER_OF_CYCLES_SPENT_BLOCKED, uint32_t CURRENT_CYCLE);
 
 
 const char* RANDOM_NUMBER_FILE_NAME= "random-numbers";
